@@ -1,0 +1,453 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+nav {
+    width: 860px;
+    height: 120px;
+    background-color: #5372fae1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 0 20px;   
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;  /* espacio entre logo y texto */
+}
+
+.img-logo {
+    height: 90px;
+}
+
+.nombre-pagina {
+    font-size: 25px;
+    font-weight: bold;
+    color: #1D3557;
+}
+
+nav ul {
+    padding-top: 10px;
+    padding-right: 10px;
+    float: right;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    transition: 0.8s all;
+    padding: 18px 20px;
+}
+
+nav ul li:hover {
+    background-color: #FADADD;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:visited {
+    color: #140b0b;
+}
+
+a:active {
+    color: #00039b;
+}
+
+.img-logo {
+    width: 100px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+
+.banner {
+    width: 100%;
+    height: 500px;
+    margin-top: 10px;
+}
+
+.featured {
+    background-color: #A8DADC;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;  /* Espacio entre el video y el texto */
+}
+
+.fp-video {
+    width: 50%;
+}
+
+.ft-articulo {
+    width: 40%;
+}
+
+
+article {
+    padding: 30px;
+    background-color: #A8DADC;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+article h1 {
+    padding-bottom: 10px;
+    font-size: 23px;
+    color: #1D3557;
+}
+
+article h2 {
+    margin: 0;
+    padding-top: 30px;
+    color: #1D3557;
+    font-size: 30px;
+}
+
+article p {
+    font-size: 18px;
+}
+
+.fp-video,
+.ft-articulo {
+    display: inline-block;
+}
+
+.boton-container {
+    text-align: center;
+    border-radius: 50px;
+    background-color: #fff1f2;
+    margin: 0 auto;
+}
+
+.boton-container a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.boton {
+    padding: 20px;
+}
+
+.boton-container :hover {
+    background-color: #457B9D;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.art-image img {
+    width: 300px;
+    height: 250px;
+    display: inline-flex;
+    margin-inline: 35px;
+}
+
+.art-image:hover {
+    transform: scale(1.02)
+}
+
+.art-cont {
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.art-cont p {
+    font-size: 23px;
+    padding: 35px;
+}
+
+
+/* Carrusel */
+
+.slider-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.slider-wrapper:hover {
+    transform: scale(1.01)
+}
+
+.slider {
+    display: flex;  /* Cada imagen al lado de la otra */
+    aspect-ratio: 16 / 9;   /* Definir proporción de la imagen */
+    overflow-x: hidden; /* Lo que salga del tamaño del contenedor se ocultará */
+    scroll-snap-type: x mandatory; /* establecer como se desplazarán las imagenes */
+    scroll-behavior: smooth;    /* Movimiento de la transición */
+    box-shadow: 0 .25rem .5rem #21212126;
+    border-radius: .5rem;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;   /* Se posiciona en el primer elemento */
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;  /* Botones centrados */
+    transform: translateX(-50%);
+    z-index: 1; /* Establecer los botones una capa sobre la imagen*/
+}
+
+.slider-nav a {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 100%;
+}
+
+
+/* Introducciones */
+
+.contenedor {
+    display: flex;
+    align-items: center;    /* Centra verticalmente */
+    gap: 10px;  /* Espacio entre imagen y texto */
+    margin: 30px 10px;
+    box-shadow: 0 .25rem .5rem #21212126;
+    border-radius: 10px;
+}
+
+.contenedor img {
+    width: 500px;
+    padding: 15px;
+}
+
+.contenedor img:hover {
+    transform: scale(1.02)
+}
+
+.contenedor h1 {
+    color: #1D3557;
+}
+
+.contenedor-texto {
+    max-width: 100%;
+    padding: 30px;
+}
+
+
+/* Tarjetas / Cards */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card {
+    width: 260px;
+    background-color: #A8DADC;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: scale(1.03)
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #393939;
+    font-size: 15px;
+    line-height: 1.3;
+    flex-grow: 1;
+}
+
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #5372fae1;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #FFF;
+}
+
+.card-content .btn:hover {
+    color: #000000;
+    background-color: #FADADD;
+}
+
+
+/* Recetas */
+
+.recipe {
+    max-width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recipe h1 {
+    color: #457B9D;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recipe h2 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #1d3557;
+  font-size: 24px;
+  border-left: 5px solid #a8dadc;
+  padding-left: 10px;
+}
+
+.recipe p {
+    font-size: 20px;
+}
+
+.recipe img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.recipe ul {
+  background: #f1faee;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  list-style: none;
+}
+.recipe ul li::before {
+  content: "✔";
+  color: #457b9d;
+  font-weight: bold;
+}
+
+
+.recipe ol {
+  background: #f1faee;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  counter-reset: pasos;
+}
+.recipe ol li {
+  margin: 12px 0;
+  counter-increment: pasos;
+  position: relative;
+}
+
+
+.resultado {
+  margin-top: 40px;
+  padding: 25px;
+  background: #a8dadc;
+  border-left: 6px solid #1d3557;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #1d3557;
+  font-style: italic;
+}
+
+/* Footer */
+
+
+footer {
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+    padding: 25px 15px;
+    font-size: 15px;
+}
+
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex; /* activa flexbox */
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+    border-right: 1px solid #555; /* línea vertical */
+}
+
+.footer-column:last-child {
+    border-right: none; /* quita la línea en la última columna */
+}
+
+.footer-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #FADADD;
+    text-align: center;
+}
+
+.footer-desc {
+    font-size: 15px;
+    margin: 0 0 12px;
+    color: #ddd;
+}
+
+.footer-info p {
+    margin: 6px 0;
+    color: #ccc;
+    align-items: center;
+}
+
+footer i {
+    margin-right: 6px;
+    color: #ccc;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.footer-copy {
+    font-size: 12px;
+    color: #ccc;
+}
